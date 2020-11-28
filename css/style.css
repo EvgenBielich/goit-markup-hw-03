@@ -1,4 +1,7 @@
 :root {
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
   --accent-color-white: #ffffff;
   --accent-color-black: #212121;
   --accent-color-blue: #2196f3;
@@ -6,33 +9,87 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-}
-
-.navigation-list,
-.about-list,
-.about-title-list,
-.command-list,
-.portfolio-list,
-.example-list {
-  list-style-type: none;
+  font-family: var(--main-font);
 }
 
 .address {
   font-style: normal;
 }
 
-.navigation-list .activ {
-  color: var(--accent-color-blue);
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ============== HEADER  ========================== */
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.header .logo {
+  margin-right: 93px;
+}
+
+.header .address {
+  margin-left: auto;
+}
+
+.contact-info:not(:first-child) {
+  margin-left: 50px;
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-  text-decoration: none;
   color: var(--accent-color-black);
 }
 
@@ -40,15 +97,7 @@ body {
   color: var(--accent-color-blue);
 }
 
-.navigation-list {
-  display: flex;
-}
-
-.navigation-list .navigation-list-item {
-  border: 1px solid red;
-}
-
-.navigation-list .navigation-list-item:not(:last-child) {
+.navigation-list-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -58,7 +107,10 @@ body {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: var(--accent-color-black);
-  text-decoration: none;
+}
+
+.navigation-list .activ {
+  color: var(--accent-color-blue);
 }
 
 .navigation-list-link:hover,
@@ -74,7 +126,17 @@ body {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: var(--accent-color-grey);
-  text-decoration: none;
+}
+
+/* ========== HERO  ============= */
+
+.title-page {
+  background-color: #2f303a;
+  padding-top: 220px;
+  padding-bottom: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .home-page {
@@ -84,7 +146,9 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* color: var(--accent-color-white); */
+  color: var(--accent-color-white);
+  margin-bottom: 30px;
+  width: 700px;
 }
 
 .button-title {
@@ -92,12 +156,36 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--accent-color-white);
   background: var(--accent-color-blue);
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 10px 32px;
+}
+
+/* =========== ABOUT =================== */
+.about .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-list {
+  display: flex;
+  align-items: center;
+  padding-top: 94px;
+  margin-bottom: 94px;
+}
+
+.about .about-title {
+  margin-bottom: 50px;
+}
+
+.about-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .about-list-item-title {
@@ -107,6 +195,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color-black);
+  padding-bottom: 10px;
 }
 
 .about-list-item-text {
@@ -115,6 +204,7 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--accent-color-grey);
+  width: 260px;
 }
 
 .about-title,
@@ -127,6 +217,37 @@ body {
   color: var(--accent-color-black);
 }
 
+.about-title-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-title-list {
+  display: flex;
+  padding-bottom: 94px;
+}
+
+/* ===================== COMMAND ================== */
+.command {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #f5f4fa;
+  padding-top: 94px;
+}
+
+.command-list {
+  display: flex;
+  padding-bottom: 94px;
+}
+
+.command-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.command-title {
+  margin-bottom: 50px;
+}
+
 .command-list-title {
   font-weight: 500;
   font-size: 16px;
@@ -136,6 +257,17 @@ body {
   color: var(--accent-color-black);
 }
 
+.command-list-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--accent-color-white);
+}
+.command-list-title {
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
 .command-list-text {
   font-weight: normal;
   font-size: 16px;
@@ -143,6 +275,13 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color-grey);
+  padding-bottom: 30px;
+}
+/* ====================== FOOTER ============== */
+
+.footer {
+  background-color: #2f303a;
+  padding: 60px 0;
 }
 
 .footer-list-link {
@@ -151,8 +290,17 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--accent-color-grey);
-  text-decoration: none;
 }
+
+.footer-list-item:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+.logo-item-white {
+  color: var(--accent-color-white);
+}
+
+/* =============== PORTFOLIO====================== */
 
 .portfolio-list-btn {
   font-family: "Roboto", sans-serif;
@@ -162,13 +310,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color-black);
-  text-decoration: none;
 }
 
 .portfolio-list-btn:hover,
 .portfolio-list-btn:focus {
   color: var(--accent-color-white);
-  background: var(--accent-color-blue);
+  background-color: var(--accent-color-blue);
 }
 
 .example-title {
