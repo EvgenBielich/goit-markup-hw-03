@@ -53,6 +53,10 @@ img {
   margin: 0 auto;
 }
 
+.section {
+  padding: 94px 0;
+}
+
 /* ============== HEADER  ========================== */
 .header {
   padding-top: 25px;
@@ -176,7 +180,6 @@ img {
 .about-list {
   display: flex;
   align-items: center;
-  padding-top: 94px;
   margin-bottom: 94px;
 }
 
@@ -223,7 +226,6 @@ img {
 
 .about-title-list {
   display: flex;
-  padding-bottom: 94px;
 }
 
 /* ===================== COMMAND ================== */
@@ -232,12 +234,10 @@ img {
   align-items: center;
   flex-direction: column;
   background: #f5f4fa;
-  padding-top: 94px;
 }
 
 .command-list {
   display: flex;
-  padding-bottom: 94px;
 }
 
 .command-list-item:not(:last-child) {
@@ -292,6 +292,10 @@ img {
   color: var(--accent-color-grey);
 }
 
+.footer-list {
+  margin-top: 20px;
+}
+
 .footer-list-item:not(:last-child) {
   padding-bottom: 9px;
 }
@@ -310,12 +314,36 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color-black);
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 22px;
+}
+
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-list-item {
+  padding-bottom: 50px;
 }
 
 .portfolio-list-btn:hover,
 .portfolio-list-btn:focus {
   color: var(--accent-color-white);
   background-color: var(--accent-color-blue);
+}
+
+.example-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .example-title {
@@ -332,4 +360,13 @@ img {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--accent-color-grey);
+}
+
+.example-list-wrapper {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+
+.wrapper {
+  margin-bottom: 30px;
 }
