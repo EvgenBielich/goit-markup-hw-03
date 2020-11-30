@@ -61,6 +61,7 @@ img {
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
+  border: 1px solid #ececec;
 }
 .header .container {
   display: flex;
@@ -136,11 +137,13 @@ img {
 
 .title-page {
   background-color: #2f303a;
-  padding-top: 220px;
-  padding-bottom: 280px;
+  padding: 200px 0 200px 0;
+}
+
+.title{
   display: flex;
-  align-items: center;
-  flex-direction: column;
+    flex-direction: column;
+    align-items: center;
 }
 
 .home-page {
@@ -172,6 +175,11 @@ img {
 }
 
 /* =========== ABOUT =================== */
+
+.about{
+  padding-top: 94px;
+}
+
 .about .container {
   display: flex;
   flex-direction: column;
@@ -180,11 +188,6 @@ img {
 .about-list {
   display: flex;
   align-items: center;
-  margin-bottom: 94px;
-}
-
-.about .about-title {
-  margin-bottom: 50px;
 }
 
 .about-list-item:not(:last-child) {
@@ -218,6 +221,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--accent-color-black);
+  margin-bottom: 50px;
 }
 
 .about-title-list-item:not(:last-child) {
@@ -229,6 +233,7 @@ img {
 }
 
 /* ===================== COMMAND ================== */
+
 .command {
   display: flex;
   align-items: center;
@@ -242,10 +247,6 @@ img {
 
 .command-list-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.command-title {
-  margin-bottom: 50px;
 }
 
 .command-list-title {
@@ -281,7 +282,6 @@ img {
 
 .footer {
   background-color: #2f303a;
-  padding: 60px 0;
 }
 
 .footer-list-link {
@@ -297,10 +297,19 @@ img {
 }
 
 .footer-list-item:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .logo-item-white {
+  color: var(--accent-color-white);
+}
+
+.footer-section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-address{
   color: var(--accent-color-white);
 }
 
